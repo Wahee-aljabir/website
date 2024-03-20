@@ -28,7 +28,7 @@ body {
     width: 100%;
     height: 55%;
     background: rgb(151,185,201);
-    background: linear-gradient(300deg, rgba(151,185,201,1) 0%, rgba(71,115,150,1) 26%, rgba(41,71,100,1) 44%, rgba(3,11,19,1) 95%, rgba(0,0,0,1) 100%, rgba(151,212,255,1) 151%); 
+    background: linear-gradient(300deg, rgba(151,185,201,1) 0%, rgb(71, 115, 150) 26%, rgba(41,71,100,1) 44%, rgba(3,11,19,1) 95%, rgba(0,0,0,1) 100%, rgba(151,212,255,1) 151%); 
   }
   
   .moon {
