@@ -128,3 +128,19 @@ body {
     left: 10px;
     color: white;
   }
+  .img {
+    position: absolute;
+    top: 200px;
+    left: 10px;
+    z-index: 7;
+    width: 774px;
+    height: 480px;
+  }
+  .img2 {
+    position: absolute;
+    top: 200px;
+    left: 760px;
+    z-index: 7;
+    width: 774px;
+    height: 480px;
+  }
