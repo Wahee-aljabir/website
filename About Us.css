@@ -1,0 +1,146 @@
+body {
+    background: linear-gradient(red, orange, yellow, green, blue, pink);
+  }
+
+  h1 {
+    color: rgb(255, 255, 255);
+    position: absolute;
+}
+  .h1
+  {
+    color: #fff;
+  }
+  
+  .canvas {
+      position: relative;
+      margin: auto;
+      display: block;
+      margin-top: 0%;
+      height: 1000px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  .sky {
+    position: absolute;
+    margin: auto;
+    display: block;
+    margin-top: 0%;
+    width: 100%;
+    height: 55%;
+    background: rgb(151,185,201);
+    background: linear-gradient(300deg, rgba(151,185,201,1) 0%, rgb(71, 115, 150) 26%, rgba(41,71,100,1) 44%, rgba(3,11,19,1) 95%, rgba(0,0,0,1) 100%, rgba(151,212,255,1) 151%); 
+  }
+  
+  .moon {
+    width: 140px;
+    height: 140px;
+    background: rgba(250, 252, 254, 1);
+    -moz-border-radius: 70px;
+    -webkit-border-radius: 70px;
+    border-radius: 70px;
+    position: absolute;
+    right: 10%;
+    bottom: 40%;
+  }
+  
+  .mountain-one {
+    width: 100%;
+    height: 35%;
+    position: absolute;
+    bottom: 35%;
+    right: 0%;
+    background: #465f76;
+    -webkit-clip-path: polygon(25% 12%, 100% 44%, 100% 100%, 0 100%, 0 35%);
+    clip-path: polygon(25% 12%, 100% 44%, 100% 100%, 0 100%, 0 35%);
+    z-index: 1;
+  }
+  
+  .mountain-two {
+    width: 70%;
+    height: 30%;
+    position: absolute;
+    bottom: 35%;
+    right: 0%;
+    background: #384e67;
+    -webkit-clip-path: polygon(63% 10%, 100% 40%, 100% 100%, 0% 100%);
+    clip-path: polygon(63% 10%, 100% 40%, 100% 100%, 0% 100%);
+    z-index: 2;
+  }
+  
+  .mountain-three {
+    width: 80%;
+    height: 35%;
+    position: absolute;
+    bottom: 35%;
+    left: 0%;
+    background: #293d54;
+    -webkit-clip-path: polygon(32% 30%, 0% 100%, 100% 100%);
+    clip-path: polygon(32% 30%, 0% 100%, 100% 100%);
+    z-index: 3;
+  }
+  
+  .mountain-four {
+    width: 70%;
+    height: 25%;
+    position: absolute;
+    bottom: 35%;
+    right: 0%;
+    background: #203147;
+    -webkit-clip-path: polygon(82% 52%, 0% 100%, 100% 100%);
+    clip-path: polygon(82% 52%, 0% 100%, 100% 100%);
+    z-index: 4;
+  }
+  
+  .grass {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0px;
+    background: #101929;
+    -webkit-clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
+    z-index: 5;
+  }
+  
+  .grass-one {
+    width: 100%;
+    height: 85%;
+    position: absolute;
+    bottom: 0px;
+    background: #030910;
+    z-index: 6;
+  }
+  
+  .grass-two {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    bottom: 0px;
+    background: #01050b;
+    z-index: 7;
+    -webkit-clip-path: polygon(0 19%, 100% 5%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 19%, 100% 5%, 100% 100%, 0% 100%);
+  }
+
+  p.text {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    color: white;
+  }
+  .img {
+    position: absolute;
+    top: 200px;
+    left: 10px;
+    z-index: 7;
+    width: 774px;
+    height: 480px;
+  }
+  .img2 {
+    position: absolute;
+    top: 200px;
+    left: 760px;
+    z-index: 7;
+    width: 774px;
+    height: 480px;
+  }
