@@ -1,0 +1,20 @@
+body {
+    background-image: url("pokihomescreen.jpg");
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+.text
+{
+    left: 500px;
+    top: 700px;
+}
+#divs
+{
+    display: flex;
+}
+.child
+{
+    flex: 1;
+    border: 2px solid blue;
+}
