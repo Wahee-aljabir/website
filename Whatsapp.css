@@ -57,6 +57,7 @@ body
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 15px;
 }
 .userimg
 {
@@ -65,4 +66,27 @@ body
     height: 40px;
     overflow: hidden;
     border-radius: 50%;
+    cursor: pointer;
+}
+.cover
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: over;
+}
+.nav_icons
+{
+    display: flex;
+}
+.nav_icons li
+{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    color: #51585c;
+    font-size: 1.5em;
+    margin-left: 22px;
 }
