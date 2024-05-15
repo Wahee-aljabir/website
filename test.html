@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="points"></p>
+    <p id="joining"></p>
+    <p id="pop"></p>
+    <p id="value pop"></p>
+    <p id="new_message"></p>
+    <p id="time"></p>
+<script>
+    const person = [];
+    person["firstname"] = "john";
+    person["lastname"] = "Smith";
+    person["age1"] = "27"
+    person["age2"] = "36"
+    document.getElementById("demo").innerHTML = 
+    person["firstname"] + person["age1"];
+    document.getElementById("demo2").innerHTML = 
+    person["lastname"] + person["age2"];
+
+    //Create an array with one element: (40)
+    const points = [40];
+    document.getElementById("points").innerHTML = 
+    points;
+    //Create an array with 40 undefined elements:
+    const scores = new Array(40)
+
+    //Joins all the elements in the array with-
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("joining").innerHTML = fruits.join("-")
+
+    //destroys the last item in the array
+    const cars = ["Mercedes", "Land Rover", "Toyota"]
+    cars.pop()
+
+    const vehicles = ["Mercedes", "Land Rover", "Toyota"]
+    let fruit = cars.pop()
+    
+    const date = new Date();
+    const hour = date.getHours();
+    const minute = date.getMinutes();
+    const str_time = hour + ":" + minute;
+    document.getElementById("time").innerHTML = 
+    str_time;
+</script>
+</body>
+</html>

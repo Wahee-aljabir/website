@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classchat</title>
+    <link rel="stylesheet" type="text/css" href="Whatsapp.css">
+</head>
+<body>
+    <div class="container">
+        <div class="leftSide">
+            <div class="header">
+                <div class="userimg">
+                    <img src="user.jpg" class="cover" alt="User">
+                </div>
+                <ul class="nav_icons">
+                    <li><ion-icon name="scan-circle-outline"></ion-icon></li>
+                    <li><ion-icon name="chatbox"></ion-icon></li>
+                    <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+                </ul>
+            </div>
+
+            <div class="search_chat">
+                <div>
+                    <input type="text" placeholder="Search or start new chat">
+                    <ion-icon name="search-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="chatlist">
+                <div class="block active">
+                    <div class="imgbx">
+                        <img src="user.jpg" class="cover">
+                    </div>
+                    <div class="details">
+                        <div class="listHead">
+                            <h4>Classchat</h4>
+                            <p class="time">3/5/2024</p>
+                        </div>
+                        <div class="message_p">
+                            <p>How to make Whatsapp clone using html & CSS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightSide">
+            <div class="header">
+                <div class="imgText">
+                    <div class="userimg">
+                        <img src="user.jpg" class="cover" alt="User">
+                    </div>
+                    <h4>Wahee Al-Jabir <br><span>online</span></h4>
+                </div>
+                <ul class="nav_icons">
+                    <li><ion-icon name="search-outline"></ion-icon></li>
+                    <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+                </ul>
+            </div>
+
+            <div class="chatbox">
+                <div class="message my_message">
+                    <p>Hi<br><span>12:15</span></p>
+                </div>
+                <div class="message freind_message">
+                    <p>Hello<br><span>12:15</span></p>
+                </div>
+            </div>
+            <div class="chatbox_input">
+                <ion-icon name="happy-outline"></ion-icon>
+                <ion-icon name="attach-outline"></ion-icon>
+                <input id="newmessage" type="text" placeholder="Enter a message">
+                <ion-icon name="mic"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+
+        var savedMessages = localStorage.getItem("messages") || "";
+        var newmessages = savedMessages.split("|");
+        newmessages.forEach(addMessage);
+        
+        const inputArea = $('#newmessage');
+        // Function to handle sending text
+        function sendText() {
+            var text = inputArea.val().trim(); // Trim whitespace
+            if (text) { // Check if text is not empty
+                newmessages.push(text);
+                localStorage.setItem("messages", newmessages.join("|"));
+
+                inputArea.val(''); // Clear the textarea
+                addMessage(text);
+            }
+        }
+
+        function addMessage(text) {
+            var newmessageDiv = $('<div class="message my_message"><p>Hi<br><span>12:15</span></p></div>');
+            newmessageDiv.find('p').text(text);                
+            $('.chatbox').append(newmessageDiv);
+            
+        }
+        
+        // Event listener for the Send button
+        $('#sendButton').click(sendText);
+    
+        // Event listener for pressing Enter key in the textarea
+        inputArea.keypress(function(e) {
+            if (e.which === 13) { // 13 is the Enter key
+                e.preventDefault(); // Prevent default action (new line or form submission)
+                sendText();
+            }
+        });
+    });
+    </script>
+    
+</body>
+</html>
