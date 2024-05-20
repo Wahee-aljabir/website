@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classchat</title>
     <link rel="stylesheet" type="text/css" href="Whatsapp.css">
 </head>
+
 <body>
     <div class="container">
         <div class="leftSide">
@@ -68,56 +70,134 @@
             <div class="chatbox_input">
                 <ion-icon name="happy-outline"></ion-icon>
                 <ion-icon name="attach-outline"></ion-icon>
-                <input id="newmessage" type="text" placeholder="Enter a message">
+                <input id="allMessages" type="text" placeholder="Enter a message">
                 <ion-icon name="mic"></ion-icon>
             </div>
         </div>
     </div>
-    <script src="whatsapp.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-    $(document).ready(function() {
+    <script type="text/javascript">
 
-        var savedMessages = localStorage.getItem("messages") || "";
-        var newmessages = savedMessages.split("|");
-        newmessages.forEach(addMessage);
-        
-        const inputArea = $('#newmessage');
-        // Function to handle sending text
-        function sendText() {
-            var text = inputArea.val().trim(); // Trim whitespace
-            if (text) { // Check if text is not empty
-                newmessages.push(text);
-                localStorage.setItem("messages", newmessages.join("|"));
+        const apiKey = '$2a$10$rzX4Ltk.cDKi.3LJ42sPZelnW2p5W8GSvYhrWPPpTLzzufsbXijqm';
+        const binId = '6646469ce41b4d34e4f4c737';
+        const jsonbinUrl = `https://api.jsonbin.io/v3/b/${binId}`;
 
-                inputArea.val(''); // Clear the textarea
-                addMessage(text);
+        $(document).ready(async function () {
+
+            //var savedMessages = localStorage.getItem("messages") || "";
+            //var allMessages = savedMessages.split("|");
+            var allMessages = [];
+            await loadMessagesFromJsonBin(allMessages);
+
+            const inputArea = $('#allMessages');
+            // Function to handle sending text
+            function sendText() {
+                var text = inputArea.val().trim(); // Trim whitespace
+                if (text) { // Check if text is not empty
+                    allMessages.push(text);
+                    localStorage.setItem("messages", allMessages.join("|"));
+
+                    inputArea.val(''); // Clear the textarea
+                    addMessage(text);
+                }
             }
-        }
 
-        function addMessage(text) {
-            var newmessageDiv = $('<div class="message my_message"><p>Hi<br><span>12:15</span></p></div>');
-            newmessageDiv.find('p').text(text);                
-            $('.chatbox').append(newmessageDiv);
-            
-        }
-        
-        // Event listener for the Send button
-        $('#sendButton').click(sendText);
-    
-        // Event listener for pressing Enter key in the textarea
-        inputArea.keypress(function(e) {
-            if (e.which === 13) { // 13 is the Enter key
-                e.preventDefault(); // Prevent default action (new line or form submission)
-                sendText();
+            function addMessage(text) {
+                var allMessagesDiv = $('<div class="message my_message"><p>Hi<br><span>12:15</span></p></div>');
+                allMessagesDiv.find('p').text(text);
+                $('.chatbox').append(allMessagesDiv);
+
+            }
+
+            // Event listener for the Send button
+            $('#sendButton').click(sendText);
+
+            // Event listener for pressing Enter key in the textarea
+            inputArea.keypress(function (e) {
+                if (e.which === 13) { // 13 is the Enter key
+                    e.preventDefault(); // Prevent default action (new line or form submission)
+                    sendText();
+                    saveMessageJsonBin();
+                }
+            });
+
+
+
+            async function saveMessageJsonBin() {
+                await storeMessages(allMessages);
+
+            }
+
+            async function loadMessagesFromJsonBin(allMessages) {
+                allMessages.splice(0, 0);
+                await loadMessages(allMessages, function () {
+                    allMessages.forEach(m => addMessage(m));
+                });
+                //document.getElementById("output").innerText = JSON.stringify(messages);
+
+            }
+
+            async function storeMessages(messages) {
+
+
+                try {
+
+                    let req = new XMLHttpRequest();
+
+                    req.onreadystatechange = () => {
+                        if (req.readyState == XMLHttpRequest.DONE) {
+                            console.log(req.responseText);
+                        }
+                    };
+
+                    req.open("PUT", jsonbinUrl, true);
+                    req.setRequestHeader("Content-Type", "application/json");
+                    req.setRequestHeader("X-Access-Key", apiKey);
+
+                    const json = JSON.stringify(messages);
+
+                    req.send(json);
+
+                } catch (error) {
+                    console.error("Error:", error);
+                }
+            }
+
+            async function loadMessages(messages, finished) {
+                try {
+
+                    let req = new XMLHttpRequest();
+
+                    req.onreadystatechange = () => {
+                        if (req.readyState == XMLHttpRequest.DONE) {
+                            const json = JSON.parse(req.responseText); // eval(req.responseText);
+                            const record = json.record;
+                            record.forEach(y => messages.push(y));
+
+                            finished();
+                        }
+                    };
+
+                    req.open("GET", jsonbinUrl, true);
+                    req.setRequestHeader("X-Access-Key", apiKey);
+                    req.send();
+
+                } catch (error) {
+                    console.error("Error:", error);
+                }
             }
         });
-    });
+
+        //-- Json BIN --//
+
+
+
     </script>
 </body>
+
 </html>
