@@ -328,10 +328,21 @@ body
 {
     margin-right: 15px;
 }
-.chatbox_input input
+.chatbox_input #allMessages
 {
     position: relative;
-    width: 90%;
+    width: 80%;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1em;
+}
+.chatbox_input #name
+{
+    position: relative;
+    width: 20%;
     margin: 0 20px;
     padding: 10px 20px;
     border: none;
