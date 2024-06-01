@@ -70,7 +70,7 @@
                 </div>
                 <div class="chatbox_input">
                     <ion-icon name="happy-outline"></ion-icon>
-                    <input type="text" placeholder="Type your name" id="name" required>
+                    <input type="text" placeholder="Type your name" id="name">
                     <input id="allMessages" type="text" placeholder="Welcome everyone to Wahee's Class chat. Type something in here.">
                     <ion-icon id="sendButton" name="paper-plane-outline"></ion-icon>
                 </div>
@@ -103,23 +103,27 @@
             // Function to handle sending text
             function sendText() {
                 var text = inputArea.val().trim();
-                var name = namearea.val().trim()
+                var name = namearea.val().trim();
+                if (!name) {
+                    alert("Name is required");
+                    return;
+                }
                 if (text + name) {
-                    allMessages.push(name + ": " + text);
+                    var currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    allMessages.push(name + ": " + text + "  time: " + currentTime);
                     if (allMessages.length > 100) {
-                        //allMessages.shift(); // Remove the oldest message from the array
                         allMessages.splice(0, allMessages.length - 100);
-                        $('.chatbox .message:first').remove(); // Remove the oldest message from the DOM
+                        $('.chatbox .message:first').remove();
                     }
-                    console.log("Current number of messages in the array: " + allMessages.length); // Log the number of messages
+                    console.log("Current number of messages in the array: " + allMessages.length);
                     inputArea.val('');
-                    addMessage(name + ": " + text);
+                    addMessage(name + ": " + text + "  time: " + currentTime);
                 }
             }
 
             function addMessage(text) {
                 var allMessagesDiv = $('<div class="message my_message"><p>Hi<br><span>12:15</span></p></div>');
-                allMessagesDiv.find('p').text(text);
+                allMessagesDiv.find('p').html(text);
                 $('.chatbox').append(allMessagesDiv);
 
             }
@@ -207,4 +211,5 @@
     </script>
     </body>
 
+</html>
 </html>
