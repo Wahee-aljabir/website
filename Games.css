@@ -1,20 +1,5 @@
-body {
-    background-image: url("pokihomescreen.jpg");
-    background-position-x: 0px;
-    background-position-y: 0px;
-    background-repeat: no-repeat;
-}
-.text
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
 {
-    left: 500px;
-    top: 700px;
-}
-#divs
-{
-    display: flex;
-}
-.child
-{
-    flex: 1;
-    border: 2px solid blue;
+    font-family: 'Poppins', sans-serif;
 }
