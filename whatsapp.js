@@ -1,12 +1,18 @@
 const apiKey = '$2a$10$rzX4Ltk.cDKi.3LJ42sPZelnW2p5W8GSvYhrWPPpTLzzufsbXijqm';
-const binId = '6646469ce41b4d34e4f4c737';
+const binId = '66648010e41b4d34e4006255';
 const jsonbinUrl = `https://api.jsonbin.io/v3/b/${binId}`;
 
 $(document).ready(async function () {
 
-    //var savedMessages = localStorage.getItem("messages") || "";
-    //var allMessages = savedMessages.split("|");
-    var allMessages = [];
+    $('#myInput').val('');
+    $('#name').val('');
+
+    var currentChatNo = 0;
+
+    var allMessages = [
+
+    ];
+
     await loadMessagesFromJsonBin(allMessages);
 
     const inputArea = $('#allMessages');
@@ -21,52 +27,94 @@ $(document).ready(async function () {
         }
         if (text + name) {
             var currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-            allMessages.push(name + ": " + text + "  time: " + currentTime);
+            //allMessages.push(name + ": " + text + "  time: " + currentTime);
+
+            var newMessage = {
+                chatnumber: currentChatNo,
+                text: text,
+                from: name,
+                time: currentTime
+            };
+            allMessages.push(newMessage);
+
             if (allMessages.length > 100) {
                 allMessages.splice(0, allMessages.length - 100);
                 $('.chatbox .message:first').remove();
             }
             console.log("Current number of messages in the array: " + allMessages.length);
             inputArea.val('');
-            addMessage(name + ": " + text + "  time: " + currentTime);
+            addMessage(newMessage);
+
+            saveMessageJsonBin();
         }
     }
 
-    function addMessage(text) {
-        var allMessagesDiv = $('<div class="message my_message"><p>Hi<br><span>12:15</span></p></div>');
-        allMessagesDiv.find('p').html(text);
-        $('.chatbox').append(allMessagesDiv);
+    function addMessage(message) {
+        var newMessageDiv = $('<div class="message my_message"><p>Hi<br><span>12:15</span></p></div>');
+        newMessageDiv.find('p').html(message.from + ": " + message.text);
+        newMessageDiv.find('span').html(message.time);
+        $('.chatbox').append(newMessageDiv);
 
     }
 
-    // Event listener for the Send button
+    //Event listener for the Send button
     $('#sendButton').click(sendText);
+
+    //Event listener for the Send button
+    $('.chatname').click(chatClick);
+
+    $('#tryit').click(myFunction);
+
+
+    function chatClick() {
+        var div = $(this);
+        var chatno = div.attr("chatnumber");
+        currentChatNo = parseInt(chatno);
+        if (currentChatNo === 1){
+            $('#child').show('slow');
+        }
+        else{
+            $(".chatname.active").removeClass('active');
+            div.addClass('active');
+
+            showMessagesForChat(currentChatNo, allMessages);
+        };
+    };
 
     // Event listener for pressing Enter key in the textarea
     inputArea.keypress(function (e) {
         if (e.which === 13) { // 13 is the Enter key
             e.preventDefault(); // Prevent default action (new line or form submission)
             sendText();
-            saveMessageJsonBin();
-        }
+
+        };
     });
-
-
 
     async function saveMessageJsonBin() {
         await storeMessages(allMessages);
 
-    }
+    };
+
+    function showMessagesForChat(chatNumber, allMessages) {
+        $(".chatbox").empty();
+
+        allMessages.forEach(m => {
+            if (m.chatnumber == chatNumber) {
+                addMessage(m);
+            };
+        });
+
+    };
 
     async function loadMessagesFromJsonBin(allMessages) {
         allMessages.splice(0, 0);
         await loadMessages(allMessages, function () {
-            allMessages.forEach(m => addMessage(m));
-            //$('.chatbox .message:last').scrollTo();
+
+            showMessagesForChat(currentChatNo, allMessages);
         });
         //document.getElementById("output").innerText = JSON.stringify(messages);
 
-    }
+    };
 
     async function storeMessages(messages) {
 
@@ -91,8 +139,8 @@ $(document).ready(async function () {
 
         } catch (error) {
             console.error("Error:", error);
-        }
-    }
+        };
+    };
 
     async function loadMessages(messages, finished) {
         try {
@@ -106,7 +154,7 @@ $(document).ready(async function () {
                     record.forEach(y => messages.push(y));
 
                     finished();
-                }
+                };
             };
 
             req.open("GET", jsonbinUrl, true);
@@ -115,6 +163,21 @@ $(document).ready(async function () {
 
         } catch (error) {
             console.error("Error:", error);
-        }
-    }
+        };
+    };
+
+    function myFunction() {
+        var letter = document.getElementById("myInput").value;
+        var website;
+        // If the letter is "c"
+        if (letter === "A1B2C3") {
+            showMessagesForChat(currentChatNo, allMessages);
+            $('#child').hide();
+
+            // If the letter is anything else
+        } else {
+            text = "Wrong Password! &#128551";
+        };
+        $("#demo").html(text);
+    };
 });
