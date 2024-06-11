@@ -79,6 +79,10 @@ $(document).ready(async function () {
 
             showMessagesForChat(currentChatNo, allMessages);
         };
+        
+        if (currentChatNo === 0){
+            $('#child').hide('fast')
+        }
     };
 
     // Event listener for pressing Enter key in the textarea
@@ -170,13 +174,14 @@ $(document).ready(async function () {
         var letter = document.getElementById("myInput").value;
         var website;
         // If the letter is "c"
-        if (letter === "A1B2C3") {
+        if (letter === "HAM_BURGER") {
             showMessagesForChat(currentChatNo, allMessages);
             $('#child').hide();
 
             // If the letter is anything else
         } else {
             text = "Wrong Password! &#128551";
+            showMessagesForChat(0, allMessages);
         };
         $("#demo").html(text);
     };

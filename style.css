@@ -1,142 +1,342 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 *
-
 {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-body
+.banner
 {
-  min-height: 100vh;
-  overflow-x: hidden;
-  background: linear-gradient(#2b1055,#7597de);   
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #3475ca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-header
+.banner img
 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
 }
-header .logo
+.banner .content
 {
-  color: #fff;
-  font-weight: 700;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+    position: relative;
+    max-width: 750px;
+    text-align: center;
 }
-header ul
+.banner .content h2
 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    color: #fff;
+    font-size: 18px;
 }
-header ul li
+.banner header
 {
-  list-style: none;
-  margin-left: 20px;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
 }
-header ul li a
+.banner header .logo
 {
-  text-decoration: none;
-  padding: 6px 15px;
-  color: #fff;
-  border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-style: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
-header ul li a:hover,
-header ul li a.active
+.banner header .toggle
 {
-  background: #fff;
-  color: #2b1055;
+    position: relative;
+    width: 36px;
+    height: 28px;
+    background: url(toggle.png);
+    background-size: cover;
+    cursor: pointer;
 }
-section
+.about
 {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  padding: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+    width: 100%;
+    display: flex;
 }
-section::before
+.about .contentBx
 {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(to top, #1c0522, transparent);
-  z-index: 1000;
+    background: #162c3b;
+    padding: 100px;
+    width: 50%;
 }
-section img
+.heading
 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
-section img#moon
+.text
 {
-  mix-blend-mode: screen;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
-section img#mountains_front
+.about .imgBx
 {
-  z-index: 10;
+    background: url(window.jpg);
+    width: 50%;
+    background-size: cover;
+    background-position: center;
 }
-#text
+.services
 {
-  position: absolute;
-  right: -350px;
-  color: #fff;
-  white-space: nowrap;
-  font-size: 7.5vw;
-  z-index: 9;
-  transform: translateY(0px);
+    background-color: #12222d;
+    padding: 100px;
+    text-align: center;
 }
-#btn
+.services .container
 {
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 30px;
-  border-radius: 40px;
-  background: #fff;
-  color: #2b1055;
-  font-size: 1.5em;
-  z-index: 9;
-  transform: translateY(100px);
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 60px;
 }
-.sec
+.services .container .serviceBx
 {
-  position: relative;
-  padding: 100px;
-  background: #1c0522;
+    position: relative;              
+    background: #fff;              
+    width: 350px;              
+    height: 400px;              
+    display: flex;              
+    justify-content: center;              
+    align-items: center;      
+    margin: 20px;              
+    padding: 55px;              
 }
-.sec h2
+.services .container .serviceBx img
 {
-  font-size: 3.5em;
-  margin-bottom: 10px;
-  color: #fff;
+    width: 200px;
 }
-.sec p
+.services .container .serviceBx h2
 {
-  font-size: 1em;
-  color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
-.friv
+.technology
 {
-  z-index: 100;
+    background: #3f8ffc;
+    width: 100%;
+    padding: 100px;
+    padding-top: 300px;
+    margin-top: -300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.technology .contentBx
+{
+    max-width: 800px;
+}
+.technology .imgBx
+{
+    max-width: 250px;
+}
+.technology .imgBx img
+{
+    max-width: 100%;
+}
+.client
+{
+    background: #162c3b;
+    padding: 10px;
+    text-align: center;
+}
+.client .imgBx
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.client .imgBx img
+{
+    max-width: 200px;
+    margin: 20px;
+    opacity: 0.25;
+    cursor: pointer;
+}
+.client .imgBx img:hover
+{
+    opacity: 1;
+}
+.testimonials
+{
+    position: relative;
+    padding: 100px;
+    background: #12222d;
+    text-align: center;
+}
+.testimonials .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.testimonials .container .contentBx
+{
+    background: #fff;
+    padding: 60px 50px;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+.testimonials .container .contentBx p
+{
+    font-style: italic;
+}
+.testimonials .container .contentBx h3
+{
+    width: 100%;
+    text-align: end;
+    font-weight: 500;
+    color: #3f8ffc;
+}
+.footer
+{
+    background: #162c3b;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer ul
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.footer ul li
+{
+    list-style: none;
+}
+.footer ul li a
+{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+.footer ul li a img
+{
+    filter: inherit;
+    max-width: 20px;
+}
+@media (max-width: 1200px)
+{
+    .banner
+    {
+        padding: 50px;
+    }
+    .banner .header
+    {
+        padding: 20px 50px;
+    }
+    .banner .content h2
+    {
+        font-size: 36px;
+    }
+    .banner .content p
+    {
+        font-size: 16px;
+    }
+    .about
+    {
+        flex-direction: column;
+    }
+    .about .contentBx,
+    .about .imgBx
+    {
+        width: 1005;
+        padding: 50px;
+        min-height: 400px;
+        text-align: center;
+    }
+    .services
+    {
+        background: #12222d;
+        padding: 100px;
+        text-align: center;
+    }
+    .services .container
+    {
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .services .container .serviceBx
+    {
+        position: relative;
+        background: #fff;
+        width: 350px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+    }
+    .technology
+    {
+       padding: 50px; 
+       padding-top: 300px;
+       justify-content: center;
+       flex-direction: column;
+       margin-top: 60px;
+    }
+    .technology .imgBx
+    {
+        margin-top: 40px;
+        max-width: 250px;
+    }
+    .client
+    {
+        padding: 50px;
+    }
+    .client .imgBx
+    {
+        justify-content: center;
+    }
+    .testimonials
+    {
+        padding: 50px;
+    }
+    .testimonials .contentBx
+    {
+        padding: 60px 40px;
+        max-width: 550px;
+        margin-bottom: 40px;
+    }
+    .testimonials .contentBx:last-child
+    {
+        margin-bottom: 0px;
+    }
 }
