@@ -51,7 +51,7 @@ $(document).ready(async function () {
 
     function addMessage(message) {
         var newMessageDiv = $('<div class="message my_message"><p>Hi<br><span>12:15</span></p></div>');
-        newMessageDiv.find('p').html(message.from + ": " + message.text);
+        newMessageDiv.find('p').html(message.from + ": " + message.text + " The time is: " + message.time);
         newMessageDiv.find('span').html(message.time);
         $('.chatbox').append(newMessageDiv);
 
