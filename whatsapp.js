@@ -38,19 +38,17 @@ $(document).ready(async function () {
             inputArea.val('');
             addMessage(newMessage);
 
+            allMessages.push(newMessage)
 
-            loadMessagesFromJsonBin(allMessages).then(function () {
-               
-                allMessages.push(newMessage);
+            saveMessageJsonBin().then(function () {
                 if (allMessages.length > 100) {
-                    allMessages.splice(0, allMessages.length - 100);
+                    //allMessages.splice(0, allMessages.length - 100);
                     $('.chatbox .message:first').remove();
                 }
                 console.log("Current number of messages in the array: " + allMessages.length);
 
-                
-                saveMessageJsonBin();
-            }, function(e){
+                showMessagesForChat(currentChatNo, allMessages);
+            }).catch(function(e) {
                 console.log(e);
             });
         }
@@ -108,6 +106,7 @@ $(document).ready(async function () {
 
     function showMessagesForChat(chatNumber, allMessages) {
         $(".chatbox").empty();
+        console.log("clear messages" + allMessages.length);
 
         allMessages.forEach(m => {
             if (m.chatnumber == chatNumber) {
@@ -118,10 +117,9 @@ $(document).ready(async function () {
     };
 
     async function loadMessagesFromJsonBin(allMessages) {
-        allMessages.splice(0, 0);
-        
+        allMessages.splice(0, allMessages.length);
+        console.log("a" + allMessages.length);
         await loadMessages(allMessages, function () {
-
             showMessagesForChat(currentChatNo, allMessages);
         });
         //document.getElementById("output").innerText = JSON.stringify(messages);
@@ -165,13 +163,14 @@ $(document).ready(async function () {
 
     async function loadMessages(messages, finished) {
         try {
-
             let req = new XMLHttpRequest();
 
             req.onreadystatechange = () => {
                 if (req.readyState == XMLHttpRequest.DONE) {
                     const json = JSON.parse(req.responseText); // eval(req.responseText);
                     const record = json.record;
+                    messages.splice(0,messages.length);
+
                     record.forEach(y => messages.push(y));
 
                     finished();
