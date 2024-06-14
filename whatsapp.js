@@ -27,25 +27,32 @@ $(document).ready(async function () {
         }
         if (text + name) {
             var currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-            //allMessages.push(name + ": " + text + "  time: " + currentTime);
-
+            
             var newMessage = {
                 chatnumber: currentChatNo,
                 text: text,
                 from: name,
                 time: currentTime
             };
-            allMessages.push(newMessage);
-
-            if (allMessages.length > 100) {
-                allMessages.splice(0, allMessages.length - 100);
-                $('.chatbox .message:first').remove();
-            }
-            console.log("Current number of messages in the array: " + allMessages.length);
+                
             inputArea.val('');
             addMessage(newMessage);
 
-            saveMessageJsonBin();
+
+            loadMessagesFromJsonBin(allMessages).then(function () {
+               
+                allMessages.push(newMessage);
+                if (allMessages.length > 100) {
+                    allMessages.splice(0, allMessages.length - 100);
+                    $('.chatbox .message:first').remove();
+                }
+                console.log("Current number of messages in the array: " + allMessages.length);
+
+                
+                saveMessageJsonBin();
+            }, function(e){
+                console.log(e);
+            });
         }
     }
 
@@ -70,17 +77,17 @@ $(document).ready(async function () {
         var div = $(this);
         var chatno = div.attr("chatnumber");
         currentChatNo = parseInt(chatno);
-        if (currentChatNo === 1){
+        if (currentChatNo === 1) {
             $('#child').show('slow');
         }
-        else{
+        else {
             $(".chatname.active").removeClass('active');
             div.addClass('active');
 
             showMessagesForChat(currentChatNo, allMessages);
         };
-        
-        if (currentChatNo === 0){
+
+        if (currentChatNo === 0) {
             $('#child').hide('fast')
         }
     };
@@ -112,6 +119,7 @@ $(document).ready(async function () {
 
     async function loadMessagesFromJsonBin(allMessages) {
         allMessages.splice(0, 0);
+        
         await loadMessages(allMessages, function () {
 
             showMessagesForChat(currentChatNo, allMessages);
@@ -119,6 +127,15 @@ $(document).ready(async function () {
         //document.getElementById("output").innerText = JSON.stringify(messages);
 
     };
+
+    //var running = false;
+    //setInterval(function () {
+        //if (running) return;
+        //running = true;
+        //loadMessagesFromJsonBin(allMessages).then(function () {
+            //running = false;
+        //});
+    //}, 60000);
 
     async function storeMessages(messages) {
 
