@@ -85,10 +85,6 @@
     margin-right: 20px;
     letter-spacing: 3px;
 }
-.banner header .buttons button:hover
-{
-
-}
 .about
 {
     width: 100%;
@@ -390,6 +386,28 @@
     color: #000000;
     padding-bottom: 20px;
 }
+.Games
+{
+    background: rgb(104, 66, 255);
+    padding: 100px;
+}
+.Games .contentBx1 .button
+{
+    color: #4891ff;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+}
+.Games .contentBx1 #real
+{
+    color: #4891ff;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+}
 .footer
 {
     background: #162c3b;
@@ -535,5 +553,9 @@
     .testimonials .contentBx:last-child
     {
         margin-bottom: 0px;
+    }
+    .Games
+    {
+        margin: 10px;
     }
 }
