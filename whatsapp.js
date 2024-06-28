@@ -26,7 +26,7 @@ $(document).ready(async function () {
             return;
         }
         if (text + name) {
-            var currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            var currentTime = new Date().toLocaleString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
             
             var newMessage = {
                 chatnumber: currentChatNo,
@@ -56,7 +56,7 @@ $(document).ready(async function () {
 
     function addMessage(message) {
         var newMessageDiv = $('<div class="message my_message"><p>Hi<br><span>12:15</span></p></div>');
-        newMessageDiv.find('p').html(message.from + ": " + message.text + " The time is: " + message.time);
+        newMessageDiv.find('p').html(message.from + ": " + message.text + " " + message.time);
         newMessageDiv.find('span').html(message.time);
         $('.chatbox').append(newMessageDiv);
 
