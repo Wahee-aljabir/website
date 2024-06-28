@@ -390,6 +390,7 @@
 {
     background: rgb(104, 66, 255);
     padding: 100px;
+    margin: 10px;
 }
 .Games .contentBx1 .button
 {
@@ -399,6 +400,7 @@
     margin-top: 5px;
     margin-bottom: 5px;
     border: none;
+    cursor: pointer;
 }
 .Games .contentBx1 #real
 {
@@ -407,6 +409,16 @@
     margin-top: 5px;
     margin-bottom: 5px;
     border: none;
+}
+.Games .contentBx2 .button
+{
+    color: #4891ff;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    cursor: pointer;
 }
 .footer
 {
