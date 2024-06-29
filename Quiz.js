@@ -173,9 +173,9 @@ const questions = [
     {
         question: "Enemy of North Korea?",
         answers: [
-            { text: "Everyone", correct: true},
+            { text: "Everyone", correct: false},
             { text: "Korea", correct: false},
-            { text: "South Korea", correct: false},
+            { text: "South Korea", correct: true},
             { text: "None", correct: false},
         ]
     },
@@ -195,15 +195,6 @@ const questions = [
             { text: "Chester", correct: false},
             { text: "Belgium", correct: true},
             { text: "Brussels", correct: true},
-        ]
-    },
-    {
-        question: "Capital of Morroco?",
-        answers: [
-            { text: "Rabat", correct: true},
-            { text: "Exeter", correct: false},
-            { text: "Anglesey", correct: false},
-            { text: "Keswick", correct: false},
         ]
     },
     {
