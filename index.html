@@ -10,7 +10,7 @@
     <!-- Banner -->
     <div class="banner">
         <header>
-            <a href="#" class="logo">NO MORE CHAT!</a>
+            <a href="whatsapp.html" class="logo">Classchat</a>
             <div class="toggle" onclick="display"></div>
             <div class="buttons">
                 <button onclick="scrollToSection('about')">About Us</button>
@@ -18,7 +18,7 @@
                 <button onclick="scrollToSection('technology')">Technology</button>
                 <button onclick="scrollToSection('client')"> Our Client</button>
                 <button onclick="scrollToSection('testimonials')">Our Blogs</button>
-            </div>
+            </div>   
         </header>
         <img src="backgroung.jpg" title="background">
         <div class="content">
@@ -37,7 +37,9 @@
     <!-- Games -->
     <section class="Games">
         <h2 class="heading">Mini Games</h2>
-        <div class="container">
+        <input type="text" id="Security">
+        <button class="SecuritySend">Send</button>
+        <div class="container" id="games">
             <div class="contentBx1">
                 <h1>Your Password is</h1>
                 <button onclick="createPassword();" class="button">Generate Password</button>

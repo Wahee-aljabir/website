@@ -23,6 +23,23 @@ $(document).ready(function(){
             click = 1
         console.log(click)
     };
+    $("#games").hide()
+    $(".logo").hide()
+    $(".SecuritySend").click(myFunction)
+    function myFunction() {
+      var letter = document.getElementById("Security").value;
+      var website;
+      // If the letter is "c"
+      if (letter === "Premium12") {
+          $("#games").show()
+          $(".logo").show()
+          // If the letter is anything else
+      } else {
+          text = "Wrong Password! &#128551";
+          $("#games").hide()
+          $(".logo").hide()
+      };
+  };
 });
 ////////// games ////////////
 function createPassword() {
