@@ -85,6 +85,61 @@
     margin-right: 20px;
     letter-spacing: 3px;
 }
+.Games
+{
+    background: rgb(104, 66, 255);
+    padding: 100px;
+    margin: 10px;
+}
+.Games .contentBx1 .button
+{
+    color: #4891ff;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    cursor: pointer;
+}
+.Games .contentBx1 #real
+{
+    color: #4891ff;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+}
+.Games .contentBx2 .button
+{
+    color: #4891ff;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    cursor: pointer;
+}
+.Pricing
+{
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+}
+.Pricings
+{
+    border: 2px solid #fff;
+    background: #000;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 20px;
+    width: 350px;
+}
+.Pricings ul {
+    list-style-position: inside;
+    padding: 5px;
+}
 .about
 {
     width: 100%;
@@ -385,40 +440,6 @@
     font-weight: 500;
     color: #000000;
     padding-bottom: 20px;
-}
-.Games
-{
-    background: rgb(104, 66, 255);
-    padding: 100px;
-    margin: 10px;
-}
-.Games .contentBx1 .button
-{
-    color: #4891ff;
-    border-radius: 15px;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border: none;
-    cursor: pointer;
-}
-.Games .contentBx1 #real
-{
-    color: #4891ff;
-    border-radius: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border: none;
-}
-.Games .contentBx2 .button
-{
-    color: #4891ff;
-    border-radius: 15px;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border: none;
-    cursor: pointer;
 }
 .footer
 {
