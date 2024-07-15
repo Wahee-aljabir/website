@@ -31,14 +31,15 @@ $(document).ready(function(){
       var website;
       // If the letter is "c"
       if (letter === "Premium12") {
-          $("#games").show()
-          $(".logo").show()
-          // If the letter is anything else
+        $("#games").show()
+        $(".logo").show()
+      } else if (letter === "Pro12") {
+        $("#ProGames").show()
       } else {
-          text = "Wrong Password! &#128551";
-          $("#games").hide()
-          $(".logo").hide()
-      };
+        text = "Wrong Password! &#128551";
+        $("#games").hide()
+        $(".logo").hide()
+    }
   };
 });
 ////////// games ////////////

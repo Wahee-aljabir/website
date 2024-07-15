@@ -37,26 +37,40 @@
     <!-- Games -->
     <section class="Games">
         <h2 class="heading">Mini Games</h2>
+        <!-- Security -->
         <input type="text" id="Security">
         <button class="SecuritySend">Send</button>
+        <!-- Security -->
+        <!-- Basic Games -->
+        <h1>Basic Games</h1>
+        <div class="contentBx1">
+            <h1>Your Password is</h1>
+            <button onclick="createPassword();" class="button">Generate Password</button>
+            <p id="real"></p>
+        </div>
+        <div class="contentBx2">
+            <button class="button" onclick="window.location.href='Quiz.html'">Quiz</button>
+        </div>
+        <!-- Basic Games -->
         <div class="container" id="games">
-            <div class="contentBx1">
-                <h1>Your Password is</h1>
-                <button onclick="createPassword();" class="button">Generate Password</button>
-                <p id="real"></p>
+            <!-- Pro Games -->
+            <div id="ProGames">
+                <div class="contentBx2">
+                    <button class="button" onclick="window.location.href='Pong.html'">Pong(AI)</button>
+                </div>
+                <div class="contentBx2">
+                    <button class="button" onclick="window.location.href='TicTacToe.html'">TicTacToe</button>
+                </div>
             </div>
-            <div class="contentBx2">
-                <button class="button" onclick="window.location.href='Quiz.html'">Quiz</button>
-            </div>
-            <div class="contentBx2">
-                <button class="button" onclick="window.location.href='Pong.html'">Pong</button>
-            </div>
+            <!-- Pro Games -->
+            <!-- Premium Games -->
             <div class="contentBx2">
                 <button class="button" onclick="window.location.href='todo.html'">Todo</button>
             </div>
             <div class="contentBx2">
-                <button class="button" onclick="window.location.href='TicTacToe.html'">TicTacToe</button>
+                <button class="button" onclick="window.location.href='imagesearch.html'">Image Search</button>
             </div>
+            <!-- Premium Games -->
         </div>
     </section>
     <!-- Pricing -->
