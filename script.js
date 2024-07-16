@@ -186,3 +186,8 @@ function createPassword() {
   console.log(randomAnswer4);
   document.getElementById("real").innerHTML =  randomAnswer1 + randomAnswer2 + randomAnswer3 + randomAnswer4;
 };
+// Function to add the clicked letter to the input field
+function addLetter(letter) {
+  document.getElementById('inputField').value += letter;
+  document.getElementById('typedLetters').innerText += letter;
+}
