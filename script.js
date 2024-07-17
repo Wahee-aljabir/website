@@ -30,7 +30,7 @@ $(document).ready(function(){
       var letter = document.getElementById("Security").value;
       var website;
       // If the letter is "c"
-      if (letter === "Premium12") {
+      if (letter === "SPICY589") {
         $("#games").show()
         $(".logo").show()
       } else if (letter === "Pro12") {
