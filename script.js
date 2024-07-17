@@ -191,3 +191,12 @@ function addLetter(letter) {
   document.getElementById('inputField').value += letter;
   document.getElementById('typedLetters').innerText += letter;
 }
+
+// Function to delete one character at a time
+function deleteCharacter() {
+  let inputField = document.getElementById('inputField');
+  let typedLetters = document.getElementById('typedLetters');
+
+  // Remove the last character from the input field
+  inputField.value = inputField.value.slice(0, -1);
+}
