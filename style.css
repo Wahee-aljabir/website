@@ -102,7 +102,11 @@
 {
     display: flex;
 }
-
+.keyboard
+{
+    align-items: center;
+    justify-content: center;
+}
 #arabicKeyboard button 
 {
     margin: 5px;
