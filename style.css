@@ -88,14 +88,14 @@
 .arabikey
 {
     background: #09ff00;
-    padding: 100px;
+    padding: 5px;
     text-align: right;
 }
 #inputField
 {
     margin: 4px;
     font-size: 1em;
-    width: 380px;
+    width: 90vw;
     text-align: right;
 }
 #arabicKeyboard 
@@ -110,8 +110,8 @@
 #arabicKeyboard button 
 {
     margin: 5px;
-    font-size: 20px;
-    width: 30px;
+    font-size: 55px;
+    width: 75px;
 }
 .Games
 {
