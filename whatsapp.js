@@ -190,7 +190,7 @@ $(document).ready(async function () {
         var letter = document.getElementById("myInput").value;
         var website;
         // If the letter is "c"
-        if (letter === "HAM_BURGER") {
+        if (letter === "apple") {
             showMessagesForChat(currentChatNo, allMessages);
             $('#child').hide();
 

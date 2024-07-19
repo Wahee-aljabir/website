@@ -30,9 +30,9 @@ $(document).ready(function(){
       var letter = document.getElementById("Security").value;
       var website;
       // If the letter is "c"
-      if (letter === "sigmaballs") {
+      if (letter === "Banana") {
         $("#games").show()
-        $(".logo").show()
+        // $(".logo").show()
       } else if (letter === "Pro12") {
         $("#ProGames").show()
       } else {
