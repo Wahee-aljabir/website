@@ -1,49 +1,51 @@
-function scrollToSection(sectionClass) {
-    document.querySelector('.' + sectionClass).scrollIntoView({ behavior: 'smooth' });
-};
-
 $(document).ready(function(){
 
-  alert("No passwords will work because the parents aren't allowing you. To get permision ask your parents to talk to mine.");
-
-    $('.buttons').hide()
-    $('.toggle').click(display)
-
-    var click = 0
-
-    function display () {
-        $(".buttons").show('slow')
-        click = click + 1
-
-        if (click === 1)
-            $(".buttons").show('slow')
-
-        if (click === 2)
-            $(".buttons").hide('slow')
-
-        if (click > 2)
-            click = 1
-        console.log(click)
-    };
-    $("#games").hide()
-    $(".logo").hide()
-    $(".SecuritySend").click(myFunction)
-    function myFunction() {
-      var letter = document.getElementById("Security").value;
-      var website;
-      // If the letter is "c"
-      if (letter === "Banana") {
-        $("#games").show()
-        // $(".logo").show()
-      } else if (letter === "Pro12") {
-        $("#ProGames").show()
-      } else {
-        text = "Wrong Password! &#128551";
-        $("#games").hide()
-        $(".logo").hide()
-    }
+  $('.buttons').hide()
+  $('.toggle').click(display)
+  var click = 0
+  function display () {
+      $(".buttons").show('slow')
+      click = click + 1
+      if (click === 1)
+          $(".buttons").show('slow')
+      if (click === 2)
+          $(".buttons").hide('slow')
+      if (click > 2)
+          click = 1
+      console.log(click)
   };
-});
+  $("#games").hide()
+  $(".logo").hide()
+  $(".SecuritySend").click(myFunction)
+  function myFunction() {
+    var letter = document.getElementById("Security").value;
+    var website;
+    // If the letter is "c"
+    if (letter === "Banana") {
+      $("#games").show()
+      // $(".logo").show()
+    } else if (letter === "Pro12") {
+      $("#ProGames").show()
+    } else {
+      text = "Wrong Password! &#128551";
+      $("#games").hide()
+      $(".logo").hide()
+    }
+  }
+  $("#sendcode").click(code);
+  
+  function code() {
+    var word = document.getElementById("codes").value;
+    var password;
+    // If the letter is "c"
+    if (word === "coding") {
+      window.location.href = "coding.html";
+    } else {
+      word = "Wrong Password! &#128551";
+      $("#games").hide()
+      $(".logo").hide()
+    }
+}
 ////////// games ////////////
 function createPassword() {
   var adjectives = [
@@ -187,7 +189,8 @@ function createPassword() {
   var randomAnswer4 = specials[index4]; // Get the random answer
   console.log(randomAnswer4);
   document.getElementById("real").innerHTML =  randomAnswer1 + randomAnswer2 + randomAnswer3 + randomAnswer4;
-};
+}
+
 // Function to add the clicked letter to the input field
 function addLetter(letter) {
   document.getElementById('inputField').value += letter;
@@ -202,3 +205,5 @@ function deleteCharacter() {
   // Remove the last character from the input field
   inputField.value = inputField.value.slice(0, -1);
 }
+
+});

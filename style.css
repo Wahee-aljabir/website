@@ -87,7 +87,7 @@
 }
 .arabikey
 {
-    background: #09ff00;
+    background: #036600;
     padding: 5px;
     text-align: right;
 }
@@ -168,130 +168,16 @@
     list-style-position: inside;
     padding: 5px;
 }
-.about
-{
-    width: 100%;
-    display: flex;
-}
-.about .contentBx
-{
-    background: #162c3b;
-    padding: 100px;
-    width: 50%;
-}
-.heading
-{
-    color: #fff;
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-.text
-{
-    color: #fff;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-.about .imgBx
-{
-    background: url(window.jpg);
-    width: 50%;
-    background-size: cover;
-    background-position: center;
-}
-.services
-{
-    background-color: #12222d;
-    padding: 100px;
-    text-align: center;
-}
-.services .container
-{
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin-top: 60px;
-}
-.services .container .serviceBx
-{
-    position: relative;              
-    background: #fff;              
-    width: 350px;              
-    height: 400px;              
-    display: flex;              
-    justify-content: center;              
-    align-items: center;      
-    margin: 20px;              
-    padding: 55px;              
-}
-.services .container .serviceBx img
-{
-    width: 200px;
-}
-.services .container .serviceBx h2
-{
-    font-weight: 500;
-    font-size: 20px;
-    letter-spacing: 1px;
-}
-.technology
-{
-    background: #3f8ffc;
-    width: 100%;
-    padding: 100px;
-    padding-top: 300px;
-    margin-top: -300px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.technology .contentBx
-{
-    max-width: 800px;
-}
-.technology .imgBx
-{
-    max-width: 250px;
-}
-.technology .imgBx img
-{
-    max-width: 100%;
-}
-.client
-{
-    background: #162c3b;
-    padding: 10px;
-    text-align: center;
-}
-.client .imgBx
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-.client .imgBx img
-{
-    max-width: 200px;
-    margin: 20px;
-    opacity: 0.25;
-    cursor: pointer;
-}
-.client .imgBx img:hover
-{
-    opacity: 1;
-}
 .testimonials
 {
     position: relative;
     padding: 100px;
     background: #12222d;
     text-align: center;
+}
+.testimonials h2
+{
+    color: #ffffffff;
 }
 .testimonials .container
 {
@@ -322,153 +208,6 @@
     font-weight: 500;
     color: #3f8ffc;
 }
-.Sports
-{
-    position: relative;
-    padding: 100px;
-    background: goldenrod;
-    text-align: center;
-}
-.Sports .container
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-.Sports .container .contentBx1
-{
-    background: #33ff00;
-    padding: 60px 50px;
-    width: 550px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-}
-.Sports .container .contentBx1 p
-{
-    font-style: italic;
-}
-.Sports .container .contentBx1 h3
-{
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-    color: #000000;
-    padding-bottom: 20px;
-}
-.Sports .container .contentBx2
-{
-    background: #fbff00;
-    padding: 60px 50px;
-    width: 550px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-}
-.Sports .container .contentBx2 p
-{
-    font-style: italic;
-}
-.Sports .container .contentBx2 h3
-{
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-    color: #000000;
-    padding-bottom: 20px;
-}
-.Sports .container .contentBx3
-{
-    background: #8400ff;
-    padding: 60px 50px;
-    width: 550px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-}
-.Sports .container .contentBx3 p
-{
-    font-style: italic;
-}
-.Sports .container .contentBx3 h3
-{
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-    color: #000000;
-    padding-bottom: 20px;
-}
-.Sports .container .contentBx4
-{
-    background: #ffffff;
-    padding: 60px 50px;
-    width: 550px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-}
-.Sports .container .contentBx4 p
-{
-    font-style: italic;
-}
-.Sports .container .contentBx4 h3
-{
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-    color: #000000;
-    padding-bottom: 20px;
-}
-.Sports .container .contentBx5
-{
-    background: #0011ff;
-    padding: 60px 50px;
-    width: 550px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-}
-.Sports .container .contentBx5 p
-{
-    font-style: italic;
-}
-.Sports .container .contentBx5 h3
-{
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-    color: #000000;
-    padding-bottom: 20px;
-}
-.Sports .container .contentBx6
-{
-    background: #fc0000;
-    padding: 60px 50px;
-    width: 550px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-}
-.Sports .container .contentBx6 p
-{
-    font-style: italic;
-}
-.Sports .container .contentBx6 h3
-{
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-    color: #000000;
-    padding-bottom: 20px;
-}
 .footer
 {
     background: #162c3b;
@@ -498,34 +237,6 @@
     filter: inherit;
     max-width: 20px;
 }
-@media (max-width: 768px) {
-    .buttons button:nth-child(1) {
-        display: none;
-    }
-}
-
-@media (max-width: 650px) {
-    .buttons button:nth-child(1),
-    .buttons button:nth-child(2) {
-        display: none;
-    }
-}
-
-@media (max-width: 576px) {
-    .buttons button:nth-child(1),
-    .buttons button:nth-child(2),
-    .buttons button:nth-child(3) {
-        display: none;
-    }
-}
-
-@media (max-width: 400px) {
-    .buttons button:nth-child(1),
-    .buttons button:nth-child(2),
-    .buttons button:nth-child(3) {
-        display: none;
-    }
-}
 @media (max-width: 1200px)
 {
     .banner
@@ -543,63 +254,6 @@
     .banner .content p
     {
         font-size: 16px;
-    }
-    .about
-    {
-        flex-direction: column;
-    }
-    .about .contentBx,
-    .about .imgBx
-    {
-        width: 1005;
-        padding: 50px;
-        min-height: 400px;
-        text-align: center;
-    }
-    .services
-    {
-        background: #12222d;
-        padding: 100px;
-        text-align: center;
-    }
-    .services .container
-    {
-        width: 100px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .services .container .serviceBx
-    {
-        position: relative;
-        background: #fff;
-        width: 350px;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        padding: 50px;
-    }
-    .technology
-    {
-       padding: 50px; 
-       padding-top: 300px;
-       justify-content: center;
-       flex-direction: column;
-       margin-top: 60px;
-    }
-    .technology .imgBx
-    {
-        margin-top: 40px;
-        max-width: 250px;
-    }
-    .client
-    {
-        padding: 50px;
-    }
-    .client .imgBx
-    {
-        justify-content: center;
     }
     .testimonials
     {
