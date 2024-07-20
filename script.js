@@ -4,6 +4,8 @@ function scrollToSection(sectionClass) {
 
 $(document).ready(function(){
 
+  alert("No passwords will work because the parents aren't allowing you. To get permision ask your parents to talk to mine.");
+
     $('.buttons').hide()
     $('.toggle').click(display)
 
