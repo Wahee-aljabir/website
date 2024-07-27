@@ -47,6 +47,8 @@ $(document).ready(function(){
     }
 }
 ////////// games ////////////
+$(".button").click(createPassword);
+
 function createPassword() {
   var adjectives = [
     "Sleepy",
@@ -192,18 +194,18 @@ function createPassword() {
 }
 
 // Function to add the clicked letter to the input field
-function addLetter(letter) {
-  document.getElementById('inputField').value += letter;
-  document.getElementById('typedLetters').innerText += letter;
-}
+// function addLetter(letter) {
+//   document.getElementById('inputField').value += letter;
+//   document.getElementById('typedLetters').innerText += letter;
+// }
 
 // Function to delete one character at a time
-function deleteCharacter() {
-  let inputField = document.getElementById('inputField');
-  let typedLetters = document.getElementById('typedLetters');
+// function deleteCharacter() {
+//   let inputField = document.getElementById('inputField');
+//   let typedLetters = document.getElementById('typedLetters');
 
-  // Remove the last character from the input field
-  inputField.value = inputField.value.slice(0, -1);
-}
+// Remove the last character from the input field
+//   inputField.value = inputField.value.slice(0, -1);
+// }
 
 });

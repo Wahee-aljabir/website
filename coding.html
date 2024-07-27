@@ -8,20 +8,59 @@
 </head>
 <body>
     <h1>Make a website for free</h1>
+    <div id="Installation">
+        <button onclick="installation()">Install code editor</button>
+    </div>
+    <div id="installsteps">
+        <ol>
+            <li>Go to your app installer, such as microsoft store, App store, etc.</li>
+            <li>Search Cursor. Install it. Make sure it is related to code.</li>
+            <li>For now, skip the welcome customizations.</li>
+        </ol>
+    </div>
     <div id="deploy">
-        <button id="deploybutton">Making a website</button>
+        <button onclick="deployment()">Putting it on the web (for free) and setup.</button>
     </div>
     <div id="Deploymentsteps">
         <ol>
+            <li>Create a folder in documents naming it anything but make it short.</li>
             <li>Open github.com</li>
+            <li>Create an account.</li>
+            <li>Under Home it shows start a new repository. In the text box write the name of the repo, don't make it too long.</li>
+            <li>If you want to show people your website, like my one, click public.</li>
+            <li>Go to your code editor, preferably cursor. and in the top left you will see a line connecting to three small circles. You can find this under file, edit, selection etc. Click on it.</li>
+            <li>It is called source control.</li>
+            <li>Go to the top left again, and click file. Select Open Folder, and open the folder which you created at the start.</li>
+            <li>On the left of source control it shows a search icon. Left of the search icon it shows a file icon. Click on it.</li>
+            <li>Right under the file icon is the name of the file. Hover over it. You will see a file option next to the file name and a folder option.</li>
+            <li>Click the file option. It will create a textbox. Inside the textbox type index.html</li>
+            <li>Click the file option. It will create a textbox. Inside the textbox type style.css</li>
+            <li>Click the file option. It will create a textbox. Inside the textbox type script.js</li>
         </ol>
     </div>
-    <div id="Installation">
-        <button>Install code editor</button>
-    </div>
     <div id="code">
-        <button>Start Coding</button>
+        <button onclick="coding()">Start Coding</button>
+    </div>
+    <div id="codingsteps">
+        <ol>
+            <li>
+                <h3>Intro</h3>
+                <p>HTML is the standard language for creating web pages, using tags to define elements like headings, paragraphs, images, and links.
+                </p>
+
+                <p>CSS enhances the appearance of HTML elements by customizing design aspects like colors, fonts, spacing, and positioning.</p>
+                
+                <p>JavaScript adds interactive features to websites, manipulating HTML and CSS elements, responding to user actions, and communicating with servers for a better user experience. It makes things work like the button above.</p>
+            </li>
+        </ol>
     </div>
 </body>
-    <link rel="stylesheet" href="coding.css">
+    <script type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="coding.js"></script>
 </html>

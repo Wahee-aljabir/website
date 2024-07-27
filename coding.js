@@ -1,8 +1,15 @@
-$(document).ready(function(){
+function deployment() {
+    $("#Deploymentsteps").toggle()
+}
 
-    $("#deploybutton").click(ShowWebsitedeployment)
+function installation() {
+    $("#installsteps").toggle()
+}
 
-    function ShowWebsitedeployment() {
-        $("#Deploymentsteps").show()
-    }
+function coding() {
+    $("#codingsteps").toggle()
+}
+
+document.querySelector('button').addEventListener('click', function() {
+    document.body.classList.toggle('cover-background');
 });
