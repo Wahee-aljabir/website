@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownMenu = document.getElementById('dropdownMenu');
 
     const suggestions = {
-        "Home": "index.html",
         "Quiz": "Quiz.html",
         "Hangman": "hangman.html",
         "Todo": "todo.html",
