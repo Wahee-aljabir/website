@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.banner
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #3475ca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+}
+.banner .content
+{
+    position: relative;
+    max-width: 750px;
+    text-align: center;
+}
+.banner .content h2
+{
+    color: #fff;
+    font-size: 18px;
+}
+.banner header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    background: #000000;
+}
+.banner header .logo
+{
+    color: #fff;
+    text-decoration: none;
+    font-style: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.banner header .toggle
+{
+    position: absolute;
+    right: 30px;
+    top: 38%;
+    width: 36px;
+    height: 28px;
+    background: url(toggle.png);
+    background-size: cover;
+    cursor: pointer;
+}
+.banner header .buttons
+{
+    display: flex;
+    gap: 20px;
+}
+.banner header .buttons button
+{
+    cursor: pointer;
+    border: none;
+    background: #000000;
+    color: #ffffffff;
+    margin-left: 20px;
+    margin-right: 20px;
+    letter-spacing: 3px;
+}
+.arabikey
+{
+    background: #036600;
+    padding: 5px;
+    text-align: right;
+}
+#inputField
+{
+    margin: 4px;
+    font-size: 1em;
+    width: 90vw;
+    text-align: right;
+}
+#arabicKeyboard 
+{
+    display: flex;
+}
+.keyboard
+{
+    align-items: center;
+    justify-content: center;
+}
+#arabicKeyboard button 
+{
+    margin: 5px;
+    font-size: 55px;
+    width: 75px;
+}
+.Games
+{
+    background: rgb(104, 66, 255);
+    padding: 100px;
+    margin: 10px;
+}
+.Games .contentBx1 .button
+{
+    color: #4891ff;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    cursor: pointer;
+}
+.Games .contentBx1 #real
+{
+    color: #4891ff;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+}
+.Games .contentBx2 .button
+{
+    color: #4891ff;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    cursor: pointer;
+}
+.Pricing
+{
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+}
+.Pricings
+{
+    border: 2px solid #fff;
+    background: #fff;
+    color: #000000;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 20px;
+    width: 350px;
+}
+.Pricings ul {
+    list-style-position: inside;
+    padding: 5px;
+}
+.testimonials
+{
+    position: relative;
+    padding: 100px;
+    background: #12222d;
+    text-align: center;
+}
+.testimonials h2
+{
+    color: #ffffffff;
+}
+.testimonials .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.testimonials .container .contentBx
+{
+    background: #fff;
+    padding: 60px 50px;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+.testimonials .container .contentBx p
+{
+    font-style: italic;
+}
+.testimonials .container .contentBx h3
+{
+    width: 100%;
+    text-align: end;
+    font-weight: 500;
+    color: #3f8ffc;
+}
+.footer
+{
+    background: #162c3b;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer ul
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60%;
+}
+.footer ul li
+{
+    list-style: none;
+}
+.footer ul li a
+{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+.footer ul li a img
+{
+    filter: inherit;
+    max-width: 20px;
+}
+@media (max-width: 1200px)
+{
+    .banner
+    {
+        padding: 50px;
+    }
+    .banner .header
+    {
+        padding: 20px 50px;
+    }
+    .banner .content h2
+    {
+        font-size: 36px;
+    }
+    .banner .content p
+    {
+        font-size: 16px;
+    }
+    .testimonials
+    {
+        padding: 50px;
+    }
+    .testimonials .contentBx
+    {
+        padding: 60px 40px;
+        max-width: 550px;
+        margin-bottom: 40px;
+    }
+    .testimonials .contentBx:last-child
+    {
+        margin-bottom: 0px;
+    }
+    .Games
+    {
+        margin: 10px;
+    }
+}

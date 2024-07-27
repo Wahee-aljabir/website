@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Banner -->
+    <div class="banner">
+        <header>
+            <a href="whatsapp.html" class="logo">Classchat</a>
+            <div class="toggle" onclick="display"></div>
+        </header>
+        <img src="background.jpg" title="background">
+        <div class="content">
+            <h2>Sucess by Design</h2>
+            <p>In addition to its modern look, the website has been optimized
+            for performance and functionality, ensuring seamless operation 
+            across different devices and browsers. The responsive design allows 
+            for easy access and navigation on mobile devices, while the use of 
+            cutting-edge technology and coding practices ensures fast loading times 
+            and smooth transitions between pages. Overall, the new website offers
+            a contemporary and visually appealing platform for users to explore 
+            and interact with the content, setting a high standard for modern web
+            design.</p>
+        </div>
+    </div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVeFJODIHyG_vD_c15ZMbUBui6zHQnrbZiet93g7sNue1vXQ/viewform?embedded=true" width="640" height="618" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <!-- <h1>"https://docs.google.com/spreadsheets/d/1o7Dqjfmx3p5rPP4I9QXaax5YkrOH02icZeDap_Ob_KE/edit?usp=sharing"</h1> -->
+    <input type="password" id="codes">
+    <button id="sendcode">Send</button>
+    <!-- Arabikey -->
+    <!-- <section class="arabikey">
+        <h1>Arabikey(Wahee version)</h1>
+        <input type="text" id="inputField">
+        Add this button to the Arabic keyboard for deleting one character at a time
+        <button onclick="deleteCharacter()">Delete</button>
+        <div id="arabicKeyboard">
+            <div class="keyboard">
+                <button onclick="addLetter('١')">١</button>
+                <button onclick="addLetter('٢')">٢</button>
+                <button onclick="addLetter('٣')">٣</button>
+                <button onclick="addLetter('٤')">٤</button>
+                <button onclick="addLetter('٥')">٥</button>
+                <button onclick="addLetter('٦')">٦</button>
+                <button onclick="addLetter('٧')">٧</button>
+                <button onclick="addLetter('٨')">٨</button>
+                <button onclick="addLetter('٩')">٩</button>
+                <button onclick="addLetter('٠')">٠</button>
+                <button onclick="addLetter('ا')">ا</button>
+                <button onclick="addLetter('ب')">ب</button>
+                <button onclick="addLetter('ت')">ت</button>
+                <button onclick="addLetter('ث')">ث</button>
+                <button onclick="addLetter('ج')">ج</button>
+                <button onclick="addLetter('ح')">ح</button>
+                <button onclick="addLetter('خ')">خ</button>
+                <button onclick="addLetter('د')">د</button>
+                <button onclick="addLetter('ذ')">ذ</button>
+                <button onclick="addLetter('ر')">ر</button>
+                <button onclick="addLetter('ز')">ز</button>
+                <button onclick="addLetter('س')">س</button>
+                <button onclick="addLetter('ش')">ش</button>
+                <button onclick="addLetter('ص')">ص</button>
+                <button onclick="addLetter('ض')">ض</button>
+                <button onclick="addLetter('ط')">ط</button>
+                <button onclick="addLetter('ظ')">ظ</button>
+                <button onclick="addLetter('ع')">ع</button>
+                <button onclick="addLetter('غ')">غ</button>
+                <button onclick="addLetter('ف')">ف</button>
+                <button onclick="addLetter('ق')">ق</button>
+                <button onclick="addLetter('ك')">ك</button>
+                <button onclick="addLetter('ل')">ل</button>
+                <button onclick="addLetter('م')">م</button>
+                <button onclick="addLetter('ن')">ن</button>
+                <button onclick="addLetter('ه')">ه</button>
+                <button onclick="addLetter('ة')">ة</button>
+                <button onclick="addLetter('ء')">ء</button>
+                <button onclick="addLetter('و')">و</button>
+                <button onclick="addLetter('ي')">ي</button>
+                <button onclick="addLetter(' ')">_</button>
+            </div>
+        </div>
+    </section>
+    -->
+    <!-- Game -->
+    <section class="Games">
+        <h2 class="heading">Mini Games</h2>
+        <!-- Security -->
+        <input type="password" id="Security">
+        <button class="SecuritySend">Send</button>
+        <!-- Security -->
+        <!-- Basic Games -->
+        <h1>Basic Games</h1>
+        <div class="contentBx1">
+            <h1>Your Password is</h1>
+            <button onclick="createPassword();" class="button" id="button">Generate Password</button>
+            <p id="real"></p>
+        </div>
+        <div class="contentBx2">
+            <button class="button" onclick="window.location.href='Quiz.html'">Quiz</button>
+        </div>
+        <!-- Basic Games -->
+        <div class="container" id="games">
+            <!-- Pro Games -->
+            <div id="ProGames">
+                <div class="contentBx2">
+                    <button class="button" onclick="window.location.href='Pong.html'">Pong(AI)</button>
+                </div>
+                <div class="contentBx2">
+                    <button class="button" onclick="window.location.href='TicTacToe.html'">TicTacToe</button>
+                </div>
+            </div>
+            <!-- Pro Games -->
+            <!-- Premium Games -->
+            <div class="contentBx2">
+                <button class="button" onclick="window.location.href='todo.html'">Todo</button>
+            </div>
+            <!-- <div class="contentBx2"> -->
+                <!-- <button class="button" onclick="window.location.href='imagesearch.html'">Image Search</button> -->
+            <!-- </div> -->
+            <!-- Premium Games -->
+        </div>
+    </section>
+    <!-- Pricing -->
+    <section class="Pricing">
+        <h2>Pricing</h2>
+        <div class="Pricings">
+            <h3>Free (No payment)</h3>
+            <ul>
+                <li>Get access to view website for free.</li>
+                <li>Get access to play basic games.</li>
+            </ul>
+        </div>
+        <div class="Pricings">
+            <h3>Pro (Payment: good behavior with me for one month)</h3>
+            <ul>
+                <li>Get access to view website for free.</li>
+                <li>Get access to play basic games.</li>
+                <li>Get access to play basic games and Pro games.</li>
+            </ul>
+        </div>
+        <div class="Pricings">
+            <h3>Premium (Payment: good behavior with me for two months)</h3>
+            <ul>
+                <li>Get access to view website for free.</li>
+                <li>Get access to play basic games.</li>
+                <li>Get access to play basic, Pro and Premium games.</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2 class="heading">Class News</h2>
+        <div class="container">
+            <div class="contentBx">
+                <div>
+                    <p>"This week  has been peaceful because there has been no wars"</p><br>
+                    <h3>Yusuf. H</h3>
+                </div>
+            </div>
+
+            <div class="contentBx">
+                <div>
+                    <p>"Thanks for making whatsapp chat, it makes our class community 
+                    stronger and to all my classmates out there, we are one big 
+                    family and we will support each other, we are bricks and 
+                    teamwork is the sement of us"</p><br>
+                    <h3>Yusuf. H</h3>
+                </div>
+            </div>
+
+            <div class="contentBx">
+                <div>
+                    <p>"Oh powerful Wahee, without your support we would never be what we are today, 
+                    Stand by my side, Brother and we will destroy the Safwani Caliphate, With you by 
+                    my side, we are an unstoppable team no matter what. Thank You for being the cement
+                    that holds our class wall together."</p><br>
+                    <h3>Yusuf. H</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <section class="footer">
+        <p class="text">Design & Developed By Wahee Al-Jabir & Wafee Al-Jabir.</p>
+        <ul>
+            <li><a href="#"><img src="facebook.png" title="facebook"></li>
+            <li><a href="#"><img src="twitter.png" title="twitter"></li>
+            <li><a href="#"><img src="linkedin.png" title="linkedin"><li>
+        </ul>
+    </section>
+    <script type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>     
+    <script src="script.js"></script>
+</body>
+</html>
