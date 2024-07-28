@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Todo": "todo.html",
         "Pong": "Pong.html",
         "Gemini ": "gemini.html",
-        "Coding": "coding.html"
+        "Coding": "coding.html",
+        "ChatBot": "gemini.html",
     };
 
     const passwordProtected = {
