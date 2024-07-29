@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Pong": "Pong.html",
         "Gemini ": "gemini.html",
         "Coding": "coding.html",
-        "ChatBot": "gemini.html",
+        "Qrcode": "Qrcode.html"
     };
 
     const passwordProtected = {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Pong": "Pong.html",
         "Todo": "todo.html",
         "Coding": "coding.html",
-        "Gemini": "gemini.html"
+        "Qrcode": "Qrcode.html"
     };
 
     searchInput.addEventListener('input', () => {
