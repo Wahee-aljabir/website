@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Todo": "todo.html",
         "Pong": "Pong.html",
         "Coding": "coding.html",
-        "Qrcode": "Qrcode.html"
+        "Qrcode Generater": "Qrcode.html",
+        "Qrcode Scan": "Qrcodescan.html"
     };
 
     const passwordProtected = {
@@ -16,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Pong": "Pong.html",
         "Todo": "todo.html",
         "Coding": "coding.html",
-        "Qrcode": "Qrcode.html"
+        "Qrcode Generater": "Qrcode.html",
+        "Qrcode Scan": "Qrcodescan.html"
     };
 
     searchInput.addEventListener('input', () => {
