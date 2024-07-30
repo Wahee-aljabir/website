@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "Hangman": "hangman.html",
         "Todo": "todo.html",
         "Pong": "Pong.html",
-        "Gemini ": "gemini.html",
         "Coding": "coding.html",
         "Qrcode": "Qrcode.html"
     };

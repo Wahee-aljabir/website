@@ -10,7 +10,8 @@
 body
 {
     display: flex;
-    align-items: center;
+    padding-top: 100px;
+    align-items: middle;
     justify-content: center;
     min-height: 100vh;
     background: #3498db;
@@ -81,4 +82,12 @@ header p
     opacity: 1;
     pointer-events: auto;
     transition: opacity 0.5s 0.05s ease;
+}
+.wrapper2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper2 .qr-code {
+    margin-top: 20px;
 }
