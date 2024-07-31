@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Pong": "Pong.html",
         "Coding": "coding.html",
         "Qrcode Generater": "Qrcode.html",
+        "Dictionary": "Dictionary.html",
         "Qrcode Scan": "Qrcodescan.html"
     };
 
