@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Coding": "coding.html",
         "Qrcode Generater": "Qrcode.html",
         "Dictionary": "Dictionary.html",
+        "Youtube": "Youtube.html",
+        "Halaltube": "Youtube.html",
         "Qrcode Scan": "Qrcodescan.html"
     };
 
