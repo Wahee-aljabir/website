@@ -273,6 +273,7 @@ hr {
     background: #121212;
     overflow: scroll;
     height: 100vh;
+    padding-bottom: 100px;
 }
 #video-container img {
     width: 310px; /* Set the width of the image */
