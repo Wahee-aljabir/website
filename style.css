@@ -1,16 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 section
 {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,4 +81,12 @@ section .main .searchBx .query
 
 .dropdown-item:hover {
     background-color: #f1f1f1;
+}
+
+.Prompts
+{
+    bottom: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
