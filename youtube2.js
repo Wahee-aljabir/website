@@ -9470,6 +9470,14 @@ const AllVideos = [
 ]
 const videoContainer = document.getElementById('video-container'); // Make sure this matches the ID in your HTML
 
+let recentVideos = JSON.parse(localStorage.getItem('recentVideos')) || [];
+
+if (!recentVideos) {
+    recentVideos = [];
+}
+
+console.log(recentVideos);
+
 function createVideos(videos) {
 	videoContainer.innerHTML = '';
 	videos.forEach(video => {
@@ -9488,11 +9496,16 @@ function createVideos(videos) {
 		channel.textContent = video.channel_title;
 		channel.style.color = 'grey'; // Set the color of the channel name to grey
 	
+		localStorage.setItem('recentVideos', JSON.stringify(recentVideos));
+
 		img.addEventListener('click', () => {
 			videoContainer.innerHTML = '';
 			const iframe = document.createElement('iframe');
 			iframe.src = `https://www.youtube.com/embed/${video.id}`;
 			videoContainer.appendChild(iframe);
+			recentVideos.push(video);
+			console.log(recentVideos);
+			localStorage.setItem('recentVideos', JSON.stringify(recentVideos));
 		});
 	
 		container.appendChild(img);
@@ -9522,3 +9535,10 @@ function search (text) {
 function handleChipClick (text) {
 	search(text);
 }
+// ----------------------------------- Video History -------------------------------
+const historyButton = document.getElementById('historyButton');
+
+historyButton.addEventListener('click', function() {
+    videoContainer.innerHTML = ''; // Clear the video container when history is clicked
+	createVideos(recentVideos);
+});
