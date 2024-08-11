@@ -9470,6 +9470,12 @@ const AllVideos = [
 ]
 const videoContainer = document.getElementById('video-container'); // Make sure this matches the ID in your HTML
 
+let watchLaterVideos = JSON.parse(localStorage.getItem('watchLaterVideos')) || [];
+
+if (!watchLaterVideos) {
+    watchLaterVideos = [];
+}
+
 let recentVideos = JSON.parse(localStorage.getItem('recentVideos')) || [];
 
 if (!recentVideos) {
@@ -9477,6 +9483,8 @@ if (!recentVideos) {
 }
 
 console.log(recentVideos);
+
+console.log(watchLaterVideos);
 
 function createVideos(videos) {
 	videoContainer.innerHTML = '';
@@ -9496,6 +9504,18 @@ function createVideos(videos) {
 		channel.textContent = video.channel_title;
 		channel.style.color = 'grey'; // Set the color of the channel name to grey
 	
+        const watchLaterButton = document.createElement('button');
+        watchLaterButton.textContent = 'Watch Later';
+		watchLaterButton.addEventListener('click', function() {
+			// Add the video to the "Watch Later" array
+			watchLaterVideos.push(video);
+			console.log('Video added to Watch Later:', video.title);
+			console.log(watchLaterVideos);
+		
+			// Save the updated watchLaterVideos array to local storage
+			localStorage.setItem('watchLaterVideos', JSON.stringify(watchLaterVideos));
+		});
+
 		localStorage.setItem('recentVideos', JSON.stringify(recentVideos));
 
 		img.addEventListener('click', () => {
@@ -9510,7 +9530,8 @@ function createVideos(videos) {
 	
 		container.appendChild(img);
 		container.appendChild(title);
-		container.appendChild(channel); // Append the channel name after the title
+		container.appendChild(channel);
+		container.appendChild(watchLaterButton);
 		videoContainer.appendChild(container);
 	});
 }
@@ -9539,6 +9560,11 @@ function handleChipClick (text) {
 const historyButton = document.getElementById('historyButton');
 
 historyButton.addEventListener('click', function() {
-    videoContainer.innerHTML = ''; // Clear the video container when history is clicked
+    videoContainer.innerHTML = '';
 	createVideos(recentVideos);
+});
+// ----------------------------------- Watch Later ---------------------------------
+WatchlaterButton.addEventListener('click', function() {
+    videoContainer.innerHTML = '';
+	createVideos(watchLaterVideos);
 });
