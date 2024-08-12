@@ -9487,84 +9487,103 @@ console.log(recentVideos);
 console.log(watchLaterVideos);
 
 function createVideos(videos) {
-	videoContainer.innerHTML = '';
-	videos.forEach(video => {
-		const container = document.createElement('div');
-	
-		const img = document.createElement('img');
-		img.src = video.thumbnails_medium_url;
-		img.alt = video.title;
-	
-		const title = document.createElement('p');
-		title.textContent = video.title;
-		title.style.color = 'white';
-		title.style.whiteSpace = 'normal';
-	
-		const channel = document.createElement('p'); // Create a new element for the channel name
-		channel.textContent = video.channel_title;
-		channel.style.color = 'grey'; // Set the color of the channel name to grey
-	
+    videoContainer.innerHTML = '';
+    videos.forEach(video => {
+        const container = document.createElement('div');
+
+        const img = document.createElement('img');
+        img.src = video.thumbnails_medium_url;
+        img.alt = video.title;
+
+        const title = document.createElement('p');
+        title.textContent = video.title;
+        title.style.color = 'white';
+        title.style.whiteSpace = 'normal';
+
+        const channel = document.createElement('p');
+        channel.textContent = video.channel_title;
+        channel.style.color = 'grey';
+
         const watchLaterButton = document.createElement('button');
-        watchLaterButton.textContent = 'Watch Later';
-		watchLaterButton.addEventListener('click', function() {
-			// Add the video to the "Watch Later" array
-			watchLaterVideos.push(video);
-			console.log('Video added to Watch Later:', video.title);
-			console.log(watchLaterVideos);
-		
-			// Save the updated watchLaterVideos array to local storage
-			localStorage.setItem('watchLaterVideos', JSON.stringify(watchLaterVideos));
-		});
+        watchLaterButton.addEventListener('click', function() {
+            watchLaterVideos.push(video);
+            console.log('Video added to Watch Later:', video.title);
+            console.log(watchLaterVideos);
 
-		localStorage.setItem('recentVideos', JSON.stringify(recentVideos));
+            localStorage.setItem('watchLaterVideos', JSON.stringify(watchLaterVideos));
+        });
 
-		img.addEventListener('click', () => {
-			videoContainer.innerHTML = '';
-			const iframe = document.createElement('iframe');
-			iframe.src = `https://www.youtube.com/embed/${video.id}`;
-			videoContainer.appendChild(iframe);
-			recentVideos.push(video);
-			console.log(recentVideos);
-			localStorage.setItem('recentVideos', JSON.stringify(recentVideos));
-		});
-	
-		container.appendChild(img);
-		container.appendChild(title);
-		container.appendChild(channel);
-		container.appendChild(watchLaterButton);
-		videoContainer.appendChild(container);
-	});
+        localStorage.setItem('recentVideos', JSON.stringify(recentVideos));
+
+        container.appendChild(img);
+        container.appendChild(title);
+        container.appendChild(channel);
+        container.appendChild(watchLaterButton);
+        videoContainer.appendChild(container);
+    });
 }
+
 createVideos(AllVideos);
+
 // -------------------------- Search Input Work ------------------------------------
+
 const searchInput = document.getElementById('searchInput');
 
 searchInput.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         console.log(searchInput.value);
-		search(searchInput.value);
-    }	
+        search(searchInput.value);
+    }   
 });
-function search (text) {
-	var searchedVideos = AllVideos.filter(v => 
-		v.title.toLocaleLowerCase().includes(text.toLocaleLowerCase())
-		|| v.channel_title.toLocaleLowerCase().includes(text.toLocaleLowerCase())
-	);
-	createVideos(searchedVideos);
+
+function search(text) {
+    var searchedVideos = AllVideos.filter(v => 
+        v.title.toLocaleLowerCase().includes(text.toLocaleLowerCase())
+        || v.channel_title.toLocaleLowerCase().includes(text.toLocaleLowerCase())
+    );
+    createVideos(searchedVideos);
 }
+
 // -------------------------------- Add Chip Click ---------------------------------
-function handleChipClick (text) {
-	search(text);
+
+function handleChipClick(text) {
+    search(text);
 }
+
 // ----------------------------------- Video History -------------------------------
+
 const historyButton = document.getElementById('historyButton');
 
 historyButton.addEventListener('click', function() {
     videoContainer.innerHTML = '';
-	createVideos(recentVideos);
+    createVideos(recentVideos);
 });
+
 // ----------------------------------- Watch Later ---------------------------------
+
 WatchlaterButton.addEventListener('click', function() {
     videoContainer.innerHTML = '';
-	createVideos(watchLaterVideos);
+    createVideos(watchLaterVideos);
+
+	// Add a button to clear the watchLaterVideos array
+	const clearWatchLaterButton = document.createElement('button');
+	clearWatchLaterButton.textContent = 'Clear Watch Later';
+	clearWatchLaterButton.style.position = 'absolute';
+	clearWatchLaterButton.style.top = '10px';
+	clearWatchLaterButton.style.right = '10px';
+	clearWatchLaterButton.style.color = 'black';
+	clearWatchLaterButton.style.backgroundColor = 'white';
+	clearWatchLaterButton.style.border = 'none';
+	clearWatchLaterButton.style.padding = '5px 10px';
+	clearWatchLaterButton.style.cursor = 'pointer';
+	clearWatchLaterButton.style.borderRadius = '20px';
+
+	clearWatchLaterButton.addEventListener('click', function() {
+		watchLaterVideos = [];
+		console.log('Watch Later videos cleared');
+		localStorage.setItem('watchLaterVideos', JSON.stringify(watchLaterVideos));
+		videoContainer.innerHTML = ''; // Clear the video container
+	});
+	
+	document.body.appendChild(clearWatchLaterButton); // Append the button to the document body
 });
