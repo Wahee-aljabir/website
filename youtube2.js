@@ -9505,6 +9505,13 @@ function createVideos(videos) {
         channel.style.color = 'grey';
 
         const watchLaterButton = document.createElement('button');
+		watchLaterButton.textContent = 'Add to Watch Later';
+		watchLaterButton.style.backgroundColor = 'grey';
+		watchLaterButton.style.color = 'white';
+		watchLaterButton.style.border = 'none';
+		watchLaterButton.style.padding = '5px 10px';
+		watchLaterButton.style.margin = '5px';
+		watchLaterButton.style.cursor = 'pointer';
         watchLaterButton.addEventListener('click', function() {
             watchLaterVideos.push(video);
             console.log('Video added to Watch Later:', video.title);
@@ -9556,7 +9563,31 @@ const historyButton = document.getElementById('historyButton');
 
 historyButton.addEventListener('click', function() {
     videoContainer.innerHTML = '';
+	console.log(1);
     createVideos(recentVideos);
+	console.log(2);
+
+	// Add a button to clear the watchLaterVideos array
+	const clearHistoryButton = document.createElement('button');
+	clearHistoryButton.textContent = 'Clear History';
+	clearHistoryButton.style.position = 'absolute';
+	clearHistoryButton.style.top = '10px';
+	clearHistoryButton.style.right = '10px';
+	clearHistoryButton.style.backgroundColor = 'grey';
+	clearHistoryButton.style.color = 'white';
+	clearHistoryButton.style.border = 'none';
+	clearHistoryButton.style.padding = '5px 10px';
+	clearHistoryButton.style.margin = '5px';
+	clearHistoryButton.style.cursor = 'pointer';
+	clearHistoryButton.addEventListener('click', function() {
+		recentVideos = [];
+		console.log('Video history cleared');
+		localStorage.setItem('recentVideos', JSON.stringify(recentVideos));
+		videoContainer.innerHTML = ''; // Clear the video container
+	});
+
+	const chipsRow = document.getElementById('chipsRow');
+	chipsRow.appendChild(clearHistoryButton);
 });
 
 // ----------------------------------- Watch Later ---------------------------------
@@ -9571,12 +9602,12 @@ WatchlaterButton.addEventListener('click', function() {
 	clearWatchLaterButton.style.position = 'absolute';
 	clearWatchLaterButton.style.top = '10px';
 	clearWatchLaterButton.style.right = '10px';
-	clearWatchLaterButton.style.color = 'black';
-	clearWatchLaterButton.style.backgroundColor = 'white';
+	clearWatchLaterButton.style.backgroundColor = 'grey';
+	clearWatchLaterButton.style.color = 'white';
 	clearWatchLaterButton.style.border = 'none';
 	clearWatchLaterButton.style.padding = '5px 10px';
+	clearWatchLaterButton.style.margin = '5px';
 	clearWatchLaterButton.style.cursor = 'pointer';
-	clearWatchLaterButton.style.borderRadius = '20px';
 
 	clearWatchLaterButton.addEventListener('click', function() {
 		watchLaterVideos = [];
@@ -9585,5 +9616,6 @@ WatchlaterButton.addEventListener('click', function() {
 		videoContainer.innerHTML = ''; // Clear the video container
 	});
 	
-	document.body.appendChild(clearWatchLaterButton); // Append the button to the document body
+	const chipsRow = document.getElementById('chipsRow');
+	chipsRow.appendChild(clearWatchLaterButton);
 });
