@@ -9579,11 +9579,13 @@ historyButton.addEventListener('click', function() {
 	clearHistoryButton.style.padding = '5px 10px';
 	clearHistoryButton.style.margin = '5px';
 	clearHistoryButton.style.cursor = 'pointer';
+	
 	clearHistoryButton.addEventListener('click', function() {
 		recentVideos = [];
 		console.log('Video history cleared');
 		localStorage.setItem('recentVideos', JSON.stringify(recentVideos));
 		videoContainer.innerHTML = ''; // Clear the video container
+		clearWatchLaterButton.style.display = 'none'; // Hide clearWatchLaterButton
 	});
 
 	const chipsRow = document.getElementById('chipsRow');
