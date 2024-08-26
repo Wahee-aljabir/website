@@ -6,7 +6,58 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.new {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    width: 200px;
+    height: auto; /* Adjust height based on content */
+    background-color: #ffffff; /* Change to desired color */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc; /* Optional: border for the square */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for modern look */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+}
 
+.new ul {
+    list-style-type: disc; /* Bullet points */
+    padding-left: 20px; /* Indent bullet points */
+    margin: 0; /* Remove default margin */
+}
+
+.new li {
+    margin-bottom: 10px; /* Space between bullet points */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Text color */
+}
+.HalalTubenew {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    width: 200px;
+    height: auto; /* Adjust height based on content */
+    background-color: #ffffff; /* Change to desired color */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc; /* Optional: border for the square */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for modern look */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+}
+
+.HalalTubenew ul {
+    list-style-type: disc; /* Bullet points */
+    padding-left: 20px; /* Indent bullet points */
+    margin: 0; /* Remove default margin */
+}
+
+.HalalTubenew li {
+    margin-bottom: 10px; /* Space between bullet points */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Text color */
+}
 section
 {
     position: relative;

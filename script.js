@@ -10,17 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
         "Coding": "coding.html",
         "Qrcode Generater": "Qrcode.html",
         "Dictionary": "Dictionary.html",
-        "Halaltube": "youtube.html",
+        "Halaltube": "youtube2.html",
         "Qrcode Scan": "Qrcodescan.html"
     };
 
     const passwordProtected = {
-        "Hangman": "hangman.html",
-        "Pong": "Pong.html",
-        "Todo": "todo.html",
-        "Coding": "coding.html",
-        "Qrcode Generater": "Qrcode.html",
-        "Qrcode Scan": "Qrcodescan.html"
+        "Coding": "coding.html"
     };
 
     searchInput.addEventListener('input', () => {

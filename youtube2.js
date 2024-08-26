@@ -9489,22 +9489,27 @@ console.log(watchLaterVideos);
 function createVideos(videos) {
     videoContainer.innerHTML = '';
     videos.forEach(video => {
-        const container = document.createElement('div');
-
-        const img = document.createElement('img');
-        img.src = video.thumbnails_medium_url;
-        img.alt = video.title;
-
-        const title = document.createElement('p');
-        title.textContent = video.title;
-        title.style.color = 'white';
-        title.style.whiteSpace = 'normal';
-
-        const channel = document.createElement('p');
-        channel.textContent = video.channel_title;
-        channel.style.color = 'grey';
-
-        const watchLaterButton = document.createElement('button');
+		const container = document.createElement('div');
+	
+		const img = document.createElement('img');
+		img.src = video.thumbnails_medium_url;
+		img.alt = video.title;
+		img.style.cursor = 'pointer'; // Add cursor pointer to indicate clickable
+	
+		img.addEventListener('click', function() {
+			window.location.href = `Player.html?videoId=${video.id}`;
+		});
+	
+		const title = document.createElement('p');
+		title.textContent = video.title;
+		title.style.color = 'white';
+		title.style.whiteSpace = 'normal';
+	
+		const channel = document.createElement('p');
+		channel.textContent = video.channel_title;
+		channel.style.color = 'grey';
+	
+		const watchLaterButton = document.createElement('button');
 		watchLaterButton.textContent = 'Add to Watch Later';
 		watchLaterButton.style.backgroundColor = 'grey';
 		watchLaterButton.style.color = 'white';
@@ -9512,22 +9517,22 @@ function createVideos(videos) {
 		watchLaterButton.style.padding = '5px 10px';
 		watchLaterButton.style.margin = '5px';
 		watchLaterButton.style.cursor = 'pointer';
-        watchLaterButton.addEventListener('click', function() {
-            watchLaterVideos.push(video);
-            console.log('Video added to Watch Later:', video.title);
-            console.log(watchLaterVideos);
-
-            localStorage.setItem('watchLaterVideos', JSON.stringify(watchLaterVideos));
-        });
-
-        localStorage.setItem('recentVideos', JSON.stringify(recentVideos));
-
-        container.appendChild(img);
-        container.appendChild(title);
-        container.appendChild(channel);
-        container.appendChild(watchLaterButton);
-        videoContainer.appendChild(container);
-    });
+		watchLaterButton.addEventListener('click', function() {
+			watchLaterVideos.push(video);
+			console.log('Video added to Watch Later:', video.title);
+			console.log(watchLaterVideos);
+	
+			localStorage.setItem('watchLaterVideos', JSON.stringify(watchLaterVideos));
+		});
+	
+		localStorage.setItem('recentVideos', JSON.stringify(recentVideos));
+	
+		container.appendChild(img);
+		container.appendChild(title);
+		container.appendChild(channel);
+		container.appendChild(watchLaterButton);
+		videoContainer.appendChild(container);
+	});
 }
 
 createVideos(AllVideos);
