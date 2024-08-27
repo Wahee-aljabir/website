@@ -9466,7 +9466,158 @@ const AllVideos = [
 		"title": "🐝 Flower Fiasco - Kazwa & Bilal featuring Zaky 🌺",
 		"thumbnails_medium_url": "https://i.ytimg.com/vi/txp_mNm1UMU/mqdefault.jpg",
 		"channel_title": "One4kids"
+	},
+	{
+	  "id": "gYulxyakRgg",
+	  "title": "Episode 30: The End of the Journey of Faith | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "9PT7yvfPds0",
+	  "title": "Episode 29: Yaqeen is Full Faith | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "0tFnRB6UVAA",
+	  "title": "Episode 28: The Gift of Faith | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "IIwTcjJ8NG4",
+	  "title": "Episode 27: Bend, Don't Break | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "SFO7-fwuA3A",
+	  "title": "Episode 26: Friends of Faith | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "pROcHF5L6tw",
+	  "title": "Episode 25: Fortress of Faith | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "UwrN6vdW2HQ",
+	  "title": "Episode 24: The Guardian of Faith. | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "hXPrFg3-nhA",
+	  "title": "Episode 23: Unreasonable Goals | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "vAQKN25hiWg",
+	  "title": "Episode 22: Why Do People Leave Faith | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "2xM_lhdeA2U",
+	  "title": "Episode 21: They Don't Believe Until... | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "ceX4Pt3mpJQ",
+	  "title": "Episode 20: Sweetness of Faith | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "Nz9iVh8FQrk",
+	  "title": "Episode 19: Faith in Hardship | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "apSfUtnkR0A",
+	  "title": "Episode 18: Envy and Faith | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "inuBAEAcZns",
+	  "title": "Episode 17: Poverty Leads to Disbelief | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "jjB94NN2sJ0",
+	  "title": "Episode 16: Two Hungry Wolves | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "XnZchqD36TM",
+	  "title": "Episode 15: The Faith of the Prophets Before | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "ov8mTJGDb3I",
+	  "title": "Episode 14: Allah Rewards You for Your Doubts If... | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "6ifxJT2Gbr4",
+	  "title": "Episode 13: Guidance After Iman | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "m9mGsEE6DVI",
+	  "title": "Episode 12: Omar Was Always in the Zone | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "1zuYhbUij2g",
+	  "title": "The Faith Revival Ep. 11: Remembers His Place in Front of Allah",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "qO8tV--A11Q",
+	  "title": "The Faith Revival Ep. 10: Move Beyond the Catalyst",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "BEaqnHbOKU8",
+	  "title": "The Faith Revival Ep. 9: Ammar's Heart and Omar's Shirt",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "oyFgRBPEfEg",
+	  "title": "The Faith Revival Ep. 8: Two Supplications of the Prophet",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "lNvDueK_Ht8",
+	  "title": "Episode 7: You're No Angel | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "-Q0M_5UthaU",
+	  "title": "Episode 6: Healthy Fluctuations | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "DEPQl7dqznU",
+	  "title": "Episode 5: Even if Abu Dharr Doesn't Like It | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "tT2qL3glTpc",
+	  "title": "Episode 4: He is Not a Believer When... | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "sIRputUepWU",
+	  "title": "Episode 3: Shaky Foundations | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "L9PDXYXOCmQ",
+	  "title": "Episode 2: Your Faith Wears Out | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
+	},
+	{
+	  "id": "hYQEW37_hWM",
+	  "title": "Episode 1: Faith is Refuge | The Faith Revival",
+	  "channel_title": "Yaqeen Institute"
 	}
+
 ]
 const videoContainer = document.getElementById('video-container'); // Make sure this matches the ID in your HTML
 
@@ -9492,7 +9643,7 @@ function createVideos(videos) {
 		const container = document.createElement('div');
 	
 		const img = document.createElement('img');
-		img.src = video.thumbnails_medium_url;
+		img.src = video.thumbnails_medium_url ||  "https://i.ytimg.com/vi/" + video.id + "/mqdefault.jpg";
 		img.alt = video.title;
 		img.style.cursor = 'pointer'; // Add cursor pointer to indicate clickable
 	
