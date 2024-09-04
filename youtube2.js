@@ -10799,6 +10799,9 @@ const AllVideos = [
 	  "channel_title": "Yaqeen Institute"
 	},
 ]
+
+console.log(AllVideos.length);
+
 const videoContainer = document.getElementById('video-container'); // Make sure this matches the ID in your HTML
 
 let watchLaterVideos = JSON.parse(localStorage.getItem('watchLaterVideos')) || [];
