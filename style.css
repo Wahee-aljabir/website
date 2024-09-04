@@ -32,6 +32,22 @@
     font-size: 14px; /* Adjust font size */
     color: #333; /* Text color */
 }
+
+.custom-bullet {
+    list-style-type: none;
+    position: relative;
+}
+
+.custom-bullet::before {
+    content: '•';
+    position: absolute;
+    left: -1.2em; /* Adjust as needed */
+}
+
+.custom-bullet:nth-child(1)::before {
+    color: green;
+}
+
 .HalalTubenew {
     position: absolute;
     top: 20px; /* Adjust as needed */
