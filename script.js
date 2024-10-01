@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "Qrcode Generater": "Qrcode.html",
         "Dictionary": "Dictionary.html",
         "Halaltube": "youtube2.html",
-        "Qrcode Scan": "Qrcodescan.html"
+        "Qrcode Scan": "Qrcodescan.html",
+        "Boycott": "Boycott.html",
+        "Billboard": "Billboard.html"
     };
 
     const passwordProtected = {
