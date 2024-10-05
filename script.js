@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 div.addEventListener('click', () => {
                     if (passwordProtected[item]) {
                         const password = prompt("Enter the password to access this project:");
-                        if (password === "Papaya") {
+                        if (password === "PASSWORD") {
                             window.location.href = suggestions[item];
                         } else {
                             alert("Incorrect password!");
